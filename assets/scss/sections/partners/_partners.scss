@@ -1,0 +1,107 @@
+.partners {
+    background: url(/assets/img/bg_brown.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    padding: 60px 0;
+    position: relative;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__arrow {
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 1px;
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 1px;
+        }
+    }
+    &__title {
+        font-family: 'Russo One';
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 40px;
+        &--little {
+            margin-bottom: 12px;
+            text-align: center;
+            font-family: 'Russo One';
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 60px;
+        justify-content: center;
+    }
+    &__item {
+        max-width: 232px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__image {
+        width: 100%;
+        height: 308px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    &__description {
+        text-align: center;
+        opacity: 0.7;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+    }
+}
+
+@media screen and(min-width:1280px) {
+    .partners {
+        background-size: 100% 100%;
+
+        &__title {
+            font-size: 36px;
+            max-width: 800px;
+            margin-bottom: 76px;
+            &--little {
+                margin-bottom: 24px;
+            }
+        }
+        &__list {
+            justify-content: space-between;
+        }
+        &__image {
+            margin-bottom: 36px;
+        }
+        &__arrow {
+            &--left {
+                position: absolute;
+                top: 50%;
+                left: 30px;
+            }
+            &--right {
+                position: absolute;
+                top: 50%;
+                right: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,168 @@
+.benefits {
+    background: url(/assets/img/bg_red.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        text-align: center;
+        font-family: 'Russo One';
+        font-size: 22px;
+        line-height: 150%;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        margin-bottom: 48px;
+        &--little {
+            font-family: 'Russo One';
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+            margin-bottom: 12px;
+            position: relative;
+            &::before {
+                content: url(/assets/img/check_icon.svg);
+                position: absolute;
+                top: 0;
+                left: -36px;
+            }
+        }
+    }
+    &__description {
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        margin-bottom: 20px;
+        &--little {
+            opacity: 0.74;
+            font-family: 'Roboto';
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-gap: 36px;
+        margin-bottom: 40px;
+    }
+    &__item {
+        max-width: 530px;
+        padding: 32px 44px 32px 52px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all .3s;
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+    }
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h4 {
+            font-family: 'Roboto';
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        & h5 {
+            opacity: 0.7;
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        & a {
+            padding: 20px 36px;
+            background-color: #ffffff;
+            border-radius: 4px;      
+            display: flex;
+            align-items: center;
+            transition: all .5s;
+            border: 1px solid #ffffff;
+            & p {
+                font-family: 'Russo One';
+                font-size: 15px;
+                line-height: 1.2;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0.025em;
+                color: #212121;
+                text-align: center;
+            }
+            & svg {
+                margin-right: 12px;
+            }
+            & span {
+                color: #990310;
+                font-weight: 400;
+                font-family: 'Russo One';
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+@media screen and (min-width: 1280px) {
+    .benefits {
+        padding: 110px 0;
+        &__title {
+            font-size: 36px;
+            margin-bottom: 96px;
+            &--little {
+                font-size: 22px;
+                &::before {
+                    left: -52px;
+                }
+            }
+        }
+        &__description {
+            font-size: 22px;
+            margin-bottom: 44px;
+            &--little {
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+        &__item {
+            padding: 32px 70px 32px 80px;
+        }
+        &__list {
+            margin-bottom: 92px;
+        }
+        &__offer {
+            & h4 {
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 22px;
+            }
+            & h5 {
+                margin-bottom: 24px;
+            }
+        }
+
+    }
+}

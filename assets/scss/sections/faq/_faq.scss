@@ -1,0 +1,115 @@
+.faq {
+    padding: 60px 0;
+
+    &__title {
+        font-family: 'Russo One';
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #990310;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+        grid-gap: 20px;
+        width: 100%;
+    }
+
+    &__item {
+        padding: 20px;
+        box-shadow: 3px 4px 27px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 3px 4px 27px rgba(0, 0, 0, 0.3);
+        }
+        & summary {
+            position: relative;
+            margin-left: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-gap: 20px;
+            transition: all .3s;
+
+            & svg {
+                flex-shrink: 0;
+                opacity: .4;
+                & path {
+                    fill: #584446;
+                }
+            }
+
+            & h4 {
+                opacity: 0.7;
+                font-family: Roboto;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.025em;
+                color: #2b2626;
+            }
+
+            &::before {
+                content: url(/assets/img/checkbox_gray.svg);
+                position: absolute;
+                left: -44px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        & p {
+            padding: 20px 40px 0 40px;
+            color: #ffffff;
+            opacity: 0.5;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #2b2626;
+        }
+
+        &[open] {
+            & svg {
+                transform: rotate(180deg);
+                opacity: 1;
+                & path {
+                    fill: #990310;
+                }
+            }
+
+            & summary {
+                &::before {
+                    content: url(/assets/img/checkbox_red.svg);
+                    position: absolute;
+                    left: -44px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .faq {
+        padding: 98px;
+        &__title {
+            font-size: 32px;
+        }
+        &__item {
+            & summary {
+                & h4 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
