@@ -55,43 +55,71 @@
     }
     &__item {
         background-color: #990310;
-        padding: 20px 28px;
+        padding: 16px 16px;
         border-radius: 4px;
+        border: none;
         display: flex;
         align-items: center;
         grid-gap: 12px;
         font-family: 'Russo One';
-        font-size: 14px;
+        font-size: 10px;
         line-height: 1.2;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.025em;
         color: #ffffff;
         text-align: center;
+        transition: all .3s;
         & svg {
             height: 20px;
             flex-shrink: 0;
         }
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+        }
 
         &--brown {
-            padding: 20px 28px;
+            padding: 16px 16px;
             background-color: #594547;
             display: flex;
             align-items: center;
             grid-gap: 12px;
             border-radius: 4px;
+            border: none;
             font-family: 'Russo One';
-            font-size: 14px;
+            font-size: 10px;
             line-height: 1.2;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.025em;
             color: #ffffff;
             text-align: center;
+            transition: all .3s;
+
             & svg {
                 height: 20px;
                 flex-shrink: 0;
-            } 
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+@media screen and(min-width:768px) {
+    .questions {
+        &__item {
+            padding: 20px 28px;
+            font-size: 14px;
+
+            &--brown {
+                padding: 20px 28px;
+                font-size: 14px;
+
+            }
         }
     }
 }
@@ -116,7 +144,7 @@
 
         &__item {
             width: 428px;
-
+            
             &--brown {
                 width: 428px;
             }

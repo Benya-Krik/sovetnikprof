@@ -1,5 +1,5 @@
 .range {
-    padding: 120px 0;
+    padding: 40px 0;
     position: relative;
     &__container {
         display: flex;
@@ -117,7 +117,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            & a {
+            & button {
                 border: 1px solid #990310;
                 width: 275px;
                 max-width: 100%;
@@ -180,6 +180,7 @@
 
 @media screen and (min-width:1280px) {
     .range {
+        padding: 120px 0;
         &__title {
             font-size: 40px;
             text-align: start;

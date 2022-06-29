@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
-    padding: 60px 0;
+    padding: 40px 0;
     position: relative;
     &__container {
         display: flex;
@@ -11,12 +11,12 @@
         align-items: center;
     }
     &__arrow {
-        &--left {
+        &--prev {
             position: absolute;
             top: 50%;
             left: 1px;
         }
-        &--right {
+        &--next {
             position: absolute;
             top: 50%;
             right: 1px;
@@ -43,12 +43,9 @@
         }
     }
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        grid-gap: 60px;
-        justify-content: center;
+        width: 90%;
     }
-    &__item {
+    &__slide {
         max-width: 232px;
         display: flex;
         flex-direction: column;
@@ -76,6 +73,7 @@
 @media screen and(min-width:1280px) {
     .partners {
         background-size: 100% 100%;
+        padding: 120px 0;
 
         &__title {
             font-size: 36px;
@@ -85,9 +83,10 @@
                 margin-bottom: 24px;
             }
         }
-        &__list {
-            justify-content: space-between;
-        }
+        // &__list {
+        //     justify-content: space-between;
+        //     grid-gap: 60px;
+        // }
         &__image {
             margin-bottom: 36px;
         }
